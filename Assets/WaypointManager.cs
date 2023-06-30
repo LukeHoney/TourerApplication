@@ -4,17 +4,30 @@ using UnityEngine;
 
 public class WaypointManager : MonoBehaviour
 {
-    public GameObject waypointParent; // Reference to the parent object containing the waypoints
+    public GameObject clockwiseWaypointParent; // Reference to the clockwise waypoints parent object
+    public GameObject counterclockwiseWaypointParent; // Reference to the counterclockwise waypoints parent object
     public Transform arrow; // Reference to the arrow GameObject
 
     public List<Transform> waypoints = new List<Transform>(); // List of all waypoints
     public int currentWaypointIndex = 0; // Index of the current waypoint
 
-    private void Start()
+    public void StartClockwise()
     {
+        PopulateWaypoints(clockwiseWaypointParent);
+    }
+
+    public void StartCounterclockwise()
+    {
+        PopulateWaypoints(counterclockwiseWaypointParent);
+    }
+
+    private void PopulateWaypoints(GameObject waypointParent)
+    {
+        waypoints.Clear(); // Clear the existing waypoints list
+
         if (waypointParent != null)
         {
-            // Get all child transforms of the parent object and add them to the waypoints list
+            // Get all child transforms of the selected parent object and add them to the waypoints list
             foreach (Transform child in waypointParent.transform)
             {
                 waypoints.Add(child);
