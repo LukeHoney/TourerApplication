@@ -4,22 +4,32 @@ using UnityEngine;
 
 public class WaypointManager : MonoBehaviour
 {
-    public List<Transform> waypoints; // List of all waypoints
+    public GameObject waypointParent; // Reference to the parent object containing the waypoints
     public Transform arrow; // Reference to the arrow GameObject
 
+    public List<Transform> waypoints = new List<Transform>(); // List of all waypoints
     public int currentWaypointIndex = 0; // Index of the current waypoint
 
     private void Start()
     {
-        if (waypoints.Count > 0)
+        if (waypointParent != null)
         {
-            // Set the arrow's initial target to the first waypoint
-            arrow.LookAt(waypoints[currentWaypointIndex]);
-        }
-        else
-        {
-            // No waypoints available, disable the arrow
-            arrow.gameObject.SetActive(false);
+            // Get all child transforms of the parent object and add them to the waypoints list
+            foreach (Transform child in waypointParent.transform)
+            {
+                waypoints.Add(child);
+            }
+
+            if (waypoints.Count > 0)
+            {
+                // Set the arrow's initial target to the first waypoint
+                arrow.LookAt(waypoints[currentWaypointIndex]);
+            }
+            else
+            {
+                // No waypoints available, disable the arrow
+                arrow.gameObject.SetActive(false);
+            }
         }
     }
 
@@ -39,8 +49,8 @@ public class WaypointManager : MonoBehaviour
 
     public void WaypointReached(Transform waypoint)
     {
-        // Check if there are remaining waypoints
-        if (currentWaypointIndex < waypoints.Count)
+        // Check if the waypoint exists in the list
+        if (waypoints.Contains(waypoint))
         {
             // Remove the reached waypoint from the list
             waypoints.Remove(waypoint);
