@@ -6,6 +6,7 @@ public class WaypointManager : MonoBehaviour
 {
     public GameObject clockwiseWaypointParent; // Reference to the clockwise waypoints parent object
     public GameObject counterclockwiseWaypointParent; // Reference to the counterclockwise waypoints parent object
+    public GameObject shortCutWaypointParent; // Reference to the counterclockwise waypoints parent object
     public Transform arrow; // Reference to the arrow GameObject
 
     public List<Transform> waypoints = new List<Transform>(); // List of all waypoints
@@ -19,6 +20,11 @@ public class WaypointManager : MonoBehaviour
     public void StartCounterclockwise()
     {
         PopulateWaypoints(counterclockwiseWaypointParent);
+    }
+
+    public void StartshortCut()
+    {
+        PopulateWaypoints(shortCutWaypointParent);
     }
 
     private void PopulateWaypoints(GameObject waypointParent)
