@@ -12,19 +12,30 @@ public class WaypointManager : MonoBehaviour
     public List<Transform> waypoints = new List<Transform>(); // List of all waypoints
     public int currentWaypointIndex = 0; // Index of the current waypoint
 
+    private void Start()
+    {
+        arrow.gameObject.SetActive(false); // Disable the arrow initially
+    }
+
     public void StartClockwise()
     {
+        clockwiseWaypointParent.SetActive(true); // Enable the waypoints
         PopulateWaypoints(clockwiseWaypointParent);
+        arrow.gameObject.SetActive(true); // Enable the arrow
     }
 
     public void StartCounterclockwise()
     {
+        counterclockwiseWaypointParent.SetActive(true); // Enable the waypoints
         PopulateWaypoints(counterclockwiseWaypointParent);
+        arrow.gameObject.SetActive(true); // Enable the arrow
     }
 
     public void StartshortCut()
     {
+        shortCutWaypointParent.SetActive(true); // Enable the waypoints
         PopulateWaypoints(shortCutWaypointParent);
+        arrow.gameObject.SetActive(true); // Enable the arrow
     }
 
     private void PopulateWaypoints(GameObject waypointParent)
