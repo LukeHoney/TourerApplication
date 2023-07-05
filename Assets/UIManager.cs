@@ -24,6 +24,8 @@ public class UIManager : MonoBehaviour
     public Button settingsUnselected;
     public Button settingsSelected;
 
+    public Button quitButton;
+
     [Header("ButtonsGameObjects")]
     public GameObject dropDownUnselectedGO;
     public GameObject dropDownSelectedGO;
@@ -44,8 +46,22 @@ public class UIManager : MonoBehaviour
     public GameObject settingsSelectedGO;
 
     [Header("Panels")]
-    public GameObject pickLocationPanel;
     public GameObject dropDownPanel;
+
+    public GameObject pickLocationPanel;
+    public GameObject pickLocation2Panel;
+
+    public GameObject interest1Panel;
+    public GameObject interest2Panel;
+
+    public GameObject medal1Panel;
+    public GameObject medal2Panel;
+
+    public GameObject people1Panel;
+    public GameObject people2Panel;
+
+    public GameObject settings1Panel;
+    public GameObject settings2Panel;
 
     void OnEnable()
     {
@@ -62,6 +78,7 @@ public class UIManager : MonoBehaviour
         peopleSelected.onClick.AddListener(() => peopleSelectedButton());
         settingsUnselected.onClick.AddListener(() => settingsUnselectedButton());
         settingsSelected.onClick.AddListener(() => settingsSelectedButton());
+        quitButton.onClick.AddListener(() => Quit());
 
     }
 
@@ -77,7 +94,7 @@ public class UIManager : MonoBehaviour
         falseAll();
     }
 
-    private void locationUnselectedButton() 
+    public void locationUnselectedButton() 
     {
         falseAll();
         locationSelectedGO.SetActive(true);
@@ -89,10 +106,11 @@ public class UIManager : MonoBehaviour
         falseAll();
     }
 
-    private void coffeeUnselectedButton()
+    public void coffeeUnselectedButton()
     {
         falseAll();
         coffeeSelectedGO.SetActive(true);
+        interest1Panel.SetActive(true);
     }
 
     private void coffeeSelectedButton()
@@ -100,40 +118,62 @@ public class UIManager : MonoBehaviour
         falseAll();
     }
 
-    private void medalUnselectedButton()
+    public void medalUnselectedButton()
     {
         falseAll();
-        medalSelectedGO.SetActive(true);
+        medalSelectedGO.SetActive(true); 
+        medal1Panel.SetActive(true);
     }
     private void medalSelectedButton()
     {
         falseAll();
     }
 
-    private void peopleUnselectedButton()
+    public void peopleUnselectedButton()
     {
         falseAll();
         peopleSelectedGO.SetActive(true);
+        people1Panel.SetActive(true);
     }
     private void peopleSelectedButton()
     {
         falseAll();
     }
 
-    private void settingsUnselectedButton()
+    public void settingsUnselectedButton()
     {
         falseAll();
         settingsSelectedGO.SetActive(true);
+        settings1Panel.SetActive(true);
     }
     private void settingsSelectedButton()
     {
         falseAll();
     }
 
-    private void falseAll()
+    public void Quit()
     {
-        pickLocationPanel.SetActive(false);
+        Application.Quit();
+    }
+    
+    public void falseAll()
+    {
         dropDownPanel.SetActive(false);
+        
+        pickLocationPanel.SetActive(false);
+        pickLocation2Panel.SetActive(false);
+
+        interest1Panel.SetActive(false);
+        interest2Panel.SetActive(false);
+
+        medal1Panel.SetActive(false);
+        medal2Panel.SetActive(false);
+
+        people1Panel.SetActive(false);
+        people2Panel.SetActive(false);
+
+        settings1Panel.SetActive(false);
+        settings2Panel.SetActive(false);
 
         dropDownSelectedGO.SetActive(false);
         locationSelectedGO.SetActive(false);
