@@ -735,7 +735,7 @@ namespace Google.XR.ARCoreExtensions.Samples.Geospatial
                 }
             }
 
-            InfoPanel.SetActive(true);
+            //InfoPanel.SetActive(true);
             if (earthTrackingState == TrackingState.Tracking)
             {
                 InfoText.text = string.Format(

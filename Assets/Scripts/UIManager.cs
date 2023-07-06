@@ -63,6 +63,14 @@ public class UIManager : MonoBehaviour
     public GameObject settings1Panel;
     public GameObject settings2Panel;
 
+    [Header("LocationBanner")]
+    public GameObject locationBanner;
+    public GameObject glynnVivianArtGalleryText;
+    public GameObject plantasiaTropicalZooText;
+    public GameObject swanseaArenaText;
+    public GameObject swanseaGrandTheatreText;
+    public GameObject swanseaMuseumText;
+
     void OnEnable()
     {
         //Register Button Events
@@ -156,6 +164,15 @@ public class UIManager : MonoBehaviour
         Application.Quit();
     }
     
+    public void clearLocationBanner()
+    {
+        locationBanner.SetActive(false);
+        glynnVivianArtGalleryText.SetActive(false);
+        plantasiaTropicalZooText.SetActive(false);
+        swanseaArenaText.SetActive(false);
+        swanseaGrandTheatreText.SetActive(false);
+        swanseaMuseumText.SetActive(false);
+    }
     public void falseAll()
     {
         dropDownPanel.SetActive(false);
@@ -188,7 +205,5 @@ public class UIManager : MonoBehaviour
         medalUnselectedGO.SetActive(true);
         peopleUnselectedGO.SetActive(true);
         settingsUnselectedGO.SetActive(true);
-
-
     }
 }

@@ -40,7 +40,7 @@ public class WaypointManager : MonoBehaviour
 
     private void PopulateWaypoints(GameObject waypointParent)
     {
-        waypoints.Clear(); // Clear the existing waypoints list
+        ClearWaypoints(); // Clear the existing waypoints list
 
         if (waypointParent != null)
         {
@@ -88,6 +88,12 @@ public class WaypointManager : MonoBehaviour
             // Update the arrow's target
             UpdateArrowTarget();
         }
+    }
+
+    public void ClearWaypoints()
+    {
+        waypoints.Clear(); // Clear the existing waypoints list
+        arrow.gameObject.SetActive(false);
     }
 }
 
