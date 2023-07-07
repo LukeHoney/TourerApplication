@@ -35,16 +35,16 @@ public class ParentTextEditor : MonoBehaviour
             if (textMeshPro != null)
             {
                 textMeshPro.text = text;
-                Debug.Log("Set Text: " + text);
+                //Debug.Log("Set Text: " + text);
             }
             else
             {
-                Debug.Log(textTransform.name + " GameObject doesn't have TextMeshProUGUI component!");
+                //Debug.Log(textTransform.name + " GameObject doesn't have TextMeshProUGUI component!");
             }
         }
         else
         {
-            Debug.Log("Text GameObject not found!");
+            //Debug.Log("Text GameObject not found!");
         }
     }
 

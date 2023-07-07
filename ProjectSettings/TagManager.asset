@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Waypoint
+  - Pub
+  - Restaurant
+  - Landmark
+  - Entertainment
+  - Shopping
   layers:
   - Default
   - TransparentFX
