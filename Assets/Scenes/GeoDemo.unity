@@ -13612,6 +13612,7 @@ GameObject:
   - component: {fileID: 556274599}
   - component: {fileID: 556274598}
   - component: {fileID: 556274597}
+  - component: {fileID: 556274600}
   m_Layer: 0
   m_Name: Restaurant
   m_TagString: Untagged
@@ -13685,6 +13686,18 @@ Transform:
   m_Father: {fileID: 1814180380}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &556274600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556274596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f92dea6c3be41a48b9a182ef4fcaa0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &565032425
 GameObject:
   m_ObjectHideFlags: 0
@@ -15926,6 +15939,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 640124443}
   m_CullTransparentMesh: 1
+--- !u!1 &643930304
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 643930306}
+  - component: {fileID: 643930305}
+  m_Layer: 0
+  m_Name: ItemActivator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &643930305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643930304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2099697c4137d3347bf0be855712ed79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanceFromPlayer: 50
+--- !u!4 &643930306
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643930304}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -258.0269, y: -892.7474, z: -80.70361}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2076969683}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &645844430
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18687,6 +18745,7 @@ GameObject:
   - component: {fileID: 767600190}
   - component: {fileID: 767600189}
   - component: {fileID: 767600191}
+  - component: {fileID: 767600192}
   m_Layer: 0
   m_Name: Shopping
   m_TagString: Untagged
@@ -18777,6 +18836,18 @@ MonoBehaviour:
   serviceOptionsText: 'Service options: In-store shopping'
   addressText: 'Address: 71 Uplands Cres, Swansea SA2'
   openingHoursText: 'Opening Hours: 07:00 - 23:00'
+--- !u!114 &767600192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767600187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f92dea6c3be41a48b9a182ef4fcaa0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &772878503
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29452,6 +29523,7 @@ GameObject:
   - component: {fileID: 1187167114}
   - component: {fileID: 1187167113}
   - component: {fileID: 1187167112}
+  - component: {fileID: 1187167115}
   m_Layer: 0
   m_Name: Entertainment
   m_TagString: Untagged
@@ -29525,6 +29597,18 @@ Transform:
   m_Father: {fileID: 1814180380}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &1187167115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187167111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f92dea6c3be41a48b9a182ef4fcaa0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1190707935
 GameObject:
   m_ObjectHideFlags: 0
@@ -32076,6 +32160,7 @@ GameObject:
   - component: {fileID: 1302050925}
   - component: {fileID: 1302050924}
   - component: {fileID: 1302050923}
+  - component: {fileID: 1302050926}
   m_Layer: 0
   m_Name: Landmark
   m_TagString: Untagged
@@ -32149,6 +32234,18 @@ Transform:
   m_Father: {fileID: 1814180380}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &1302050926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302050922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f92dea6c3be41a48b9a182ef4fcaa0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1306240114
 GameObject:
   m_ObjectHideFlags: 0
@@ -32999,6 +33096,7 @@ GameObject:
   - component: {fileID: 514426245}
   - component: {fileID: 1341020798}
   - component: {fileID: 1341020797}
+  - component: {fileID: 1341020799}
   m_Layer: 0
   m_Name: Pub
   m_TagString: Untagged
@@ -33056,6 +33154,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1341020796}
   m_Mesh: {fileID: -8949976184843814058, guid: 8204dd738bd15f74cad26f2282500a0b, type: 3}
+--- !u!114 &1341020799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1341020796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f92dea6c3be41a48b9a182ef4fcaa0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1341414803
 GameObject:
   m_ObjectHideFlags: 0
@@ -50725,6 +50835,7 @@ Transform:
   - {fileID: 191466180}
   - {fileID: 1557981336}
   - {fileID: 648991694}
+  - {fileID: 643930306}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
