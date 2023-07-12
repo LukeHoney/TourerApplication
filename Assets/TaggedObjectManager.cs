@@ -17,19 +17,17 @@ public class TaggedObjectManager : MonoBehaviour
         entertainmentObjects = new List<GameObject>();
         shoppingObjects = new List<GameObject>();
 
-        // Collect objects with specific tags into the lists
         CollectObjectsWithTag("Pub", pubObjects);
         CollectObjectsWithTag("Restaurant", restaurantObjects);
         CollectObjectsWithTag("Landmark", landmarkObjects);
         CollectObjectsWithTag("Entertainment", entertainmentObjects);
         CollectObjectsWithTag("Shopping", shoppingObjects);
 
-        // Set all objects with specific tags to inactive
-        SetObjectsInactive(pubObjects);
-        SetObjectsInactive(restaurantObjects);
-        SetObjectsInactive(landmarkObjects);
-        SetObjectsInactive(entertainmentObjects);
-        SetObjectsInactive(shoppingObjects);
+        SetObjectsActiveState(pubObjects, false);
+        SetObjectsActiveState(restaurantObjects, false);
+        SetObjectsActiveState(landmarkObjects, false);
+        SetObjectsActiveState(entertainmentObjects, false);
+        SetObjectsActiveState(shoppingObjects, false);
     }
 
     private void CollectObjectsWithTag(string tag, List<GameObject> objectList)
@@ -41,44 +39,71 @@ public class TaggedObjectManager : MonoBehaviour
         }
     }
 
-    private void SetObjectsInactive(List<GameObject> objects)
+    private void SetObjectsActiveState(List<GameObject> objects, bool isActive)
     {
         foreach (GameObject obj in objects)
         {
-            obj.SetActive(false);
+            obj.SetActive(isActive);
         }
     }
 
-    public void TogglePubObjects()
+    public void SetObjectsActive(List<GameObject> objects)
     {
-        ToggleObjects(pubObjects);
+        SetObjectsActiveState(objects, true);
     }
 
-    public void ToggleRestaurantObjects()
+    public void SetObjectsInactive(List<GameObject> objects)
     {
-        ToggleObjects(restaurantObjects);
+        SetObjectsActiveState(objects, false);
     }
 
-    public void ToggleLandmarkObjects()
+    public void SetPubObjectsActive()
     {
-        ToggleObjects(landmarkObjects);
+        SetObjectsActive(pubObjects);
     }
 
-    public void ToggleEntertainmentObjects()
+    public void SetPubObjectsInactive()
     {
-        ToggleObjects(entertainmentObjects);
+        SetObjectsInactive(pubObjects);
     }
 
-    public void ToggleShoppingObjects()
+    public void SetRestaurantObjectsActive()
     {
-        ToggleObjects(shoppingObjects);
+        SetObjectsActive(restaurantObjects);
     }
 
-    private void ToggleObjects(List<GameObject> objects)
+    public void SetRestaurantObjectsInactive()
     {
-        foreach (GameObject obj in objects)
-        {
-            obj.SetActive(!obj.activeSelf);
-        }
+        SetObjectsInactive(restaurantObjects);
+    }
+
+    public void SetLandmarkObjectsActive()
+    {
+        SetObjectsActive(landmarkObjects);
+    }
+
+    public void SetLandmarkObjectsInactive()
+    {
+        SetObjectsInactive(landmarkObjects);
+    }
+
+    public void SetEntertainmentObjectsActive()
+    {
+        SetObjectsActive(entertainmentObjects);
+    }
+
+    public void SetEntertainmentObjectsInactive()
+    {
+        SetObjectsInactive(entertainmentObjects);
+    }
+
+    public void SetShoppingObjectsActive()
+    {
+        SetObjectsActive(shoppingObjects);
+    }
+
+    public void SetShoppingObjectsInactive()
+    {
+        SetObjectsInactive(shoppingObjects);
     }
 }
