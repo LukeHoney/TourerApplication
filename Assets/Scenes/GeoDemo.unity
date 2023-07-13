@@ -11885,7 +11885,6 @@ GameObject:
   - component: {fileID: 569233392}
   - component: {fileID: 569233391}
   - component: {fileID: 569233393}
-  - component: {fileID: 569233394}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -11990,18 +11989,6 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
---- !u!114 &569233394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 569233390}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86f59245f5910ca46bb976c87742f551, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &585878178
 GameObject:
   m_ObjectHideFlags: 0
@@ -13710,7 +13697,7 @@ GameObject:
   - component: {fileID: 654703661}
   - component: {fileID: 654703660}
   m_Layer: 5
-  m_Name: Plus Button
+  m_Name: X Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13781,9 +13768,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 648991695}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: clearLocationBanner
+      - m_Target: {fileID: 191466179}
+        m_TargetAssemblyTypeName: WaypointManager, Assembly-CSharp
+        m_MethodName: ClearWaypoints
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13793,9 +13780,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 191466179}
-        m_TargetAssemblyTypeName: WaypointManager, Assembly-CSharp
-        m_MethodName: ClearWaypoints
+      - m_Target: {fileID: 648991695}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: falseAll
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 648991695}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: clearLocationBanner
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -35522,6 +35521,7 @@ MonoBehaviour:
   landmarkObjects: []
   entertainmentObjects: []
   shoppingObjects: []
+  distanceFromPlayer: 50
 --- !u!1 &1657648649
 GameObject:
   m_ObjectHideFlags: 0
