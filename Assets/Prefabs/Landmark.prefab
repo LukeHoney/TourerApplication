@@ -897,7 +897,6 @@ GameObject:
   - component: {fileID: 8666402854165640683}
   - component: {fileID: 8666402854165640680}
   - component: {fileID: 8666402854165640682}
-  - component: {fileID: 8666402854165640597}
   m_Layer: 0
   m_Name: Landmark
   m_TagString: Landmark
@@ -988,18 +987,6 @@ MonoBehaviour:
   serviceOptionsText: Jehovah's Witnesses
   addressText: 'Address: 5 Mirador Cres,  Swansea SA2'
   openingHoursText: 'Opening Hours: 24 Hours'
---- !u!114 &8666402854165640597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8666402854165640686}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f92dea6c3be41a48b9a182ef4fcaa0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8666402854387975851
 GameObject:
   m_ObjectHideFlags: 0
