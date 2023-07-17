@@ -95,5 +95,14 @@ public class WaypointManager : MonoBehaviour
         waypoints.Clear(); // Clear the existing waypoints list
         arrow.gameObject.SetActive(false);
     }
+
+    public void SkipWaypoint()
+    {
+        if (currentWaypointIndex < waypoints.Count)
+        {
+            waypoints.RemoveAt(currentWaypointIndex);
+            UpdateArrowTarget();
+        }
+    }
 }
 
