@@ -8,6 +8,8 @@ public class WaypointManager : MonoBehaviour
     public GameObject counterclockwiseWaypointParent; // Reference to the counterclockwise waypoints parent object
     public GameObject shortCutWaypointParent; // Reference to the counterclockwise waypoints parent object
     public Transform arrow; // Reference to the arrow GameObject
+    public GameObject ReachDestinationPanel;
+    public GameObject locationBanner;
 
     public List<Transform> waypoints = new List<Transform>(); // List of all waypoints
     public int currentWaypointIndex = 0; // Index of the current waypoint
@@ -19,23 +21,44 @@ public class WaypointManager : MonoBehaviour
 
     public void StartClockwise()
     {
-        clockwiseWaypointParent.SetActive(true); // Enable the waypoints
+        // Enable the waypoints and their parent
+        clockwiseWaypointParent.SetActive(true);
+        ActivateAllChildren(clockwiseWaypointParent);
+
+        // Populate waypoints and enable the arrow
         PopulateWaypoints(clockwiseWaypointParent);
-        arrow.gameObject.SetActive(true); // Enable the arrow
+        arrow.gameObject.SetActive(true);
     }
 
     public void StartCounterclockwise()
     {
-        counterclockwiseWaypointParent.SetActive(true); // Enable the waypoints
+        // Enable the waypoints and their parent
+        counterclockwiseWaypointParent.SetActive(true);
+        ActivateAllChildren(counterclockwiseWaypointParent);
+
+        // Populate waypoints and enable the arrow
         PopulateWaypoints(counterclockwiseWaypointParent);
-        arrow.gameObject.SetActive(true); // Enable the arrow
+        arrow.gameObject.SetActive(true);
     }
 
     public void StartshortCut()
     {
-        shortCutWaypointParent.SetActive(true); // Enable the waypoints
+        // Enable the waypoints and their parent
+        shortCutWaypointParent.SetActive(true);
+        ActivateAllChildren(shortCutWaypointParent);
+
+        // Populate waypoints and enable the arrow
         PopulateWaypoints(shortCutWaypointParent);
-        arrow.gameObject.SetActive(true); // Enable the arrow
+        arrow.gameObject.SetActive(true);
+    }
+
+
+    private void ActivateAllChildren(GameObject parent)
+    {
+        foreach (Transform child in parent.transform)
+        {
+            child.gameObject.SetActive(true);
+        }
     }
 
     private void PopulateWaypoints(GameObject waypointParent)
@@ -65,15 +88,34 @@ public class WaypointManager : MonoBehaviour
 
     private void UpdateArrowTarget()
     {
-        if (currentWaypointIndex >= waypoints.Count)
+        if (waypoints.Count > 0 && currentWaypointIndex < waypoints.Count)
         {
-            // All waypoints reached, disable the arrow
-            arrow.gameObject.SetActive(false);
+            Transform closestWaypoint = waypoints[currentWaypointIndex];
+            float closestDistance = Vector3.Distance(arrow.position, closestWaypoint.position);
+
+            for (int i = currentWaypointIndex + 1; i < waypoints.Count; i++)
+            {
+                float distanceToWaypoint = Vector3.Distance(arrow.position, waypoints[i].position);
+
+                if (distanceToWaypoint < closestDistance)
+                {
+                    closestWaypoint = waypoints[i];
+                    closestDistance = distanceToWaypoint;
+                    currentWaypointIndex = i; // Update the current waypoint index to the closest waypoint
+                }
+            }
+
+            // Remove waypoints before the closest one
+            waypoints.RemoveRange(0, currentWaypointIndex);
+
+            arrow.LookAt(closestWaypoint);
         }
         else
         {
-            // Set the arrow's target to the current waypoint
-            arrow.LookAt(waypoints[currentWaypointIndex]);
+            // All waypoints reached or no waypoints available, disable the arrow and activate ReachDestinationPanel
+            ReachDestinationPanel.gameObject.SetActive(true);
+            locationBanner.gameObject.SetActive(false);
+            arrow.gameObject.SetActive(false);
         }
     }
 
@@ -105,4 +147,3 @@ public class WaypointManager : MonoBehaviour
         }
     }
 }
-

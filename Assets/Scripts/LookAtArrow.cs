@@ -13,10 +13,11 @@ public class LookAtArrow : MonoBehaviour
 
     private void Update()
     {
-        if (manager.waypoints.Count > 0)
+        if (manager.waypoints.Count > 0 && manager.currentWaypointIndex < manager.waypoints.Count)
         {
             // Continuously update the arrow's look target
             transform.LookAt(manager.waypoints[manager.currentWaypointIndex]);
         }
     }
 }
+
