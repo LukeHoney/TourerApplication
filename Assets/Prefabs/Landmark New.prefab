@@ -36,7 +36,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -101.00008}
-  m_SizeDelta: {x: 90, y: 90}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8666402853320847505
 CanvasRenderer:
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9f7d70494f0e16b418be3152663ccd45, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7eec49007e7d9054490d3ad6dfebbf85, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -684,7 +684,7 @@ GameObject:
   - component: {fileID: 8666402854165640680}
   - component: {fileID: 8666402854165640682}
   m_Layer: 0
-  m_Name: Entertainment
+  m_Name: Landmark New
   m_TagString: Entertainment
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -734,7 +734,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9b3c5c8bed342274a8d402b24799fa49, type: 2}
+  - {fileID: 2100000, guid: 49b0aa4ccca7ad142ba30d4fcf462c77, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -768,10 +768,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dabf03bd70961dc40995e5a37acb7a6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  locationText: Whitez
-  priceAndTypeText: "\xA3\xA3\xA3  - Cocktail bar"
-  serviceOptionsText: 'Service options: No takeaway'
-  openingHoursText: 'Opening Hours: 17:00 - 03:00'
+  locationText: Kingdom Hall
+  priceAndTypeText: Place of worship
+  serviceOptionsText: Jehovah's Witnesses
+  openingHoursText: 'Opening Hours: 24 Hours'
 --- !u!1 &8666402854387975851
 GameObject:
   m_ObjectHideFlags: 0
@@ -1957,7 +1957,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8666402855446160062}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

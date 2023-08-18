@@ -8,7 +8,6 @@ public class ParentTextEditor : MonoBehaviour
     public string locationText;
     public string priceAndTypeText;
     public string serviceOptionsText;
-    public string addressText;
     public string openingHoursText;
 
     private void Start()
@@ -16,13 +15,11 @@ public class ParentTextEditor : MonoBehaviour
         Transform locationTextTransform = FindChildTransformRecursive(transform, "LocationText");
         Transform priceAndTypeTextTransform = FindChildTransformRecursive(transform, "PriceAndTypeText");
         Transform serviceOptionsTextTransform = FindChildTransformRecursive(transform, "ServiceOptionsText");
-        Transform addressTextTransform = FindChildTransformRecursive(transform, "AddressText");
         Transform openingHoursTextTransform = FindChildTransformRecursive(transform, "OpeningHoursText");
 
         SetTextValue(locationTextTransform, locationText);
         SetTextValue(priceAndTypeTextTransform, priceAndTypeText);
         SetTextValue(serviceOptionsTextTransform, serviceOptionsText);
-        SetTextValue(addressTextTransform, addressText);
         SetTextValue(openingHoursTextTransform, openingHoursText);
     }
 
