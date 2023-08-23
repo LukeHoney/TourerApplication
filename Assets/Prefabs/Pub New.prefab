@@ -449,7 +449,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6236f6b15e8f6f54fb5cc355d1bc8cd2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e19b991739925a94d93d886b93214214, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -769,9 +769,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   locationText: Jack Murphys
-  priceAndTypeText: "\xA3   - Bar"
+  priceAndTypeText: "\xA3\xA3   - Bar"
   serviceOptionsText: 'Service options: Dine-in'
-  openingHoursText: 'Opening Hours: 12:00 - 03:00'
+  openingHoursText: 'Opening Hours: 12am - 12am'
 --- !u!1 &8666402854387975851
 GameObject:
   m_ObjectHideFlags: 0

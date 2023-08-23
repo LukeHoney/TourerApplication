@@ -449,7 +449,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6236f6b15e8f6f54fb5cc355d1bc8cd2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e19b991739925a94d93d886b93214214, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -770,8 +770,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   locationText: BrewStone
   priceAndTypeText: "\xA3\xA3  - Restaurant"
-  serviceOptionsText: 'Service options: Dine-in'
-  openingHoursText: 'Opening Hours: 7:00 - 01:00'
+  serviceOptionsText: 'Service options: Dine-in, Takeaway'
+  openingHoursText: 'Opening Hours: 7am - 12am'
 --- !u!1 &8666402854387975851
 GameObject:
   m_ObjectHideFlags: 0

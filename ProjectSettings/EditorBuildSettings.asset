@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScreen.unity
     guid: a5721b544f1776e47be5022b78fc29ed
   - enabled: 1
-    path: Assets/Scenes/GeoDemo.unity
+    path: Assets/Scenes/Tourer.unity
     guid: 2930023d23a5120468b8f72fa702470c
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 5103977b20824354d80faad73db0793b,

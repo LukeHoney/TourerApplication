@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class WaypointManager : MonoBehaviour
 {
+    [Header("Routes")]
     public GameObject clockwiseWaypointParent; // Reference to the clockwise waypoints parent object
     public GameObject counterclockwiseWaypointParent; // Reference to the counterclockwise waypoints parent object
     public GameObject shortCutWaypointParent; // Reference to the counterclockwise waypoints parent object
+    public GameObject swanseaAreanWaypointParent; //Reference to the Swansea Arean Waypoint object
+    public GameObject glynnVivianArtGalleryWaypointParent; //Reference to the Glynn Vivian Art Gallery Waypoint object
+    [Header("Other")]
     public Transform arrow; // Reference to the arrow GameObject
     public GameObject ReachDestinationPanel;
     public GameObject locationBanner;
@@ -19,6 +23,26 @@ public class WaypointManager : MonoBehaviour
         arrow.gameObject.SetActive(false); // Disable the arrow initially
     }
 
+    public void StartSwanseaArena()
+    {
+        // Enable the waypoints and their parent
+        swanseaAreanWaypointParent.SetActive(true);
+        ActivateAllChildren(swanseaAreanWaypointParent);
+
+        // Populate waypoints and enable the arrow
+        PopulateWaypoints(swanseaAreanWaypointParent);
+        arrow.gameObject.SetActive(true);
+    }
+    public void StartglynnVivianArtGallery()
+    {
+        // Enable the waypoints and their parent
+        glynnVivianArtGalleryWaypointParent.SetActive(true);
+        ActivateAllChildren(glynnVivianArtGalleryWaypointParent);
+
+        // Populate waypoints and enable the arrow
+        PopulateWaypoints(glynnVivianArtGalleryWaypointParent);
+        arrow.gameObject.SetActive(true);
+    }
     public void StartClockwise()
     {
         // Enable the waypoints and their parent
