@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Google.XR.ARCoreExtensions;
 
 public class WaypointManager : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class WaypointManager : MonoBehaviour
     public GameObject ReachDestinationPanel;
     public GameObject locationBanner;
 
+    public AREarthManager EarthManager;
+
     public List<Transform> waypoints = new List<Transform>(); // List of all waypoints
     public int currentWaypointIndex = 0; // Index of the current waypoint
 
@@ -28,6 +31,7 @@ public class WaypointManager : MonoBehaviour
         // Enable the waypoints and their parent
         swanseaAreanWaypointParent.SetActive(true);
         ActivateAllChildren(swanseaAreanWaypointParent);
+        //AREarthManager.CheckVpsAvailability;
 
         // Populate waypoints and enable the arrow
         PopulateWaypoints(swanseaAreanWaypointParent);
