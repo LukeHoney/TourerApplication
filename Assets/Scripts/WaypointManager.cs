@@ -6,11 +6,11 @@ using Google.XR.ARCoreExtensions;
 public class WaypointManager : MonoBehaviour
 {
     [Header("Routes")]
-    public GameObject clockwiseWaypointParent; // Reference to the clockwise waypoints parent object
-    public GameObject counterclockwiseWaypointParent; // Reference to the counterclockwise waypoints parent object
-    public GameObject shortCutWaypointParent; // Reference to the counterclockwise waypoints parent object
     public GameObject swanseaAreanWaypointParent; //Reference to the Swansea Arean Waypoint object
     public GameObject glynnVivianArtGalleryWaypointParent; //Reference to the Glynn Vivian Art Gallery Waypoint object
+    public GameObject plantasiaTropicalWaypointParent;
+    public GameObject grandTheatreWaypointParent;
+    public GameObject swanseaMuseumWaypointParent;
     [Header("Other")]
     public Transform arrow; // Reference to the arrow GameObject
     public GameObject ReachDestinationPanel;
@@ -47,36 +47,34 @@ public class WaypointManager : MonoBehaviour
         PopulateWaypoints(glynnVivianArtGalleryWaypointParent);
         arrow.gameObject.SetActive(true);
     }
-    public void StartClockwise()
+    public void StartplantasiaTropical()
     {
         // Enable the waypoints and their parent
-        clockwiseWaypointParent.SetActive(true);
-        ActivateAllChildren(clockwiseWaypointParent);
+        plantasiaTropicalWaypointParent.SetActive(true);
+        ActivateAllChildren(plantasiaTropicalWaypointParent);
 
         // Populate waypoints and enable the arrow
-        PopulateWaypoints(clockwiseWaypointParent);
+        PopulateWaypoints(plantasiaTropicalWaypointParent);
         arrow.gameObject.SetActive(true);
     }
-
-    public void StartCounterclockwise()
+    public void StartgrandTheatre()
     {
         // Enable the waypoints and their parent
-        counterclockwiseWaypointParent.SetActive(true);
-        ActivateAllChildren(counterclockwiseWaypointParent);
+        grandTheatreWaypointParent.SetActive(true);
+        ActivateAllChildren(grandTheatreWaypointParent);
 
         // Populate waypoints and enable the arrow
-        PopulateWaypoints(counterclockwiseWaypointParent);
+        PopulateWaypoints(grandTheatreWaypointParent);
         arrow.gameObject.SetActive(true);
     }
-
-    public void StartshortCut()
+    public void StartswanseaMuseum()
     {
         // Enable the waypoints and their parent
-        shortCutWaypointParent.SetActive(true);
-        ActivateAllChildren(shortCutWaypointParent);
+        swanseaMuseumWaypointParent.SetActive(true);
+        ActivateAllChildren(swanseaMuseumWaypointParent);
 
         // Populate waypoints and enable the arrow
-        PopulateWaypoints(shortCutWaypointParent);
+        PopulateWaypoints(swanseaMuseumWaypointParent);
         arrow.gameObject.SetActive(true);
     }
 
