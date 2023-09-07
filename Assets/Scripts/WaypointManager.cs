@@ -16,7 +16,7 @@ public class WaypointManager : MonoBehaviour
     public GameObject ReachDestinationPanel;
     public GameObject locationBanner;
 
-    public AREarthManager EarthManager;
+    public AudioManager audioManager;
 
     public List<Transform> waypoints = new List<Transform>(); // List of all waypoints
     public int currentWaypointIndex = 0; // Index of the current waypoint
@@ -139,6 +139,7 @@ public class WaypointManager : MonoBehaviour
         else
         {
             // All waypoints reached or no waypoints available, disable the arrow and activate ReachDestinationPanel
+            audioManager.FinishAudio();
             ReachDestinationPanel.gameObject.SetActive(true);
             locationBanner.gameObject.SetActive(false);
             arrow.gameObject.SetActive(false);
