@@ -11,6 +11,7 @@ public class WaypointManager : MonoBehaviour
     public GameObject plantasiaTropicalWaypointParent;
     public GameObject grandTheatreWaypointParent;
     public GameObject swanseaMuseumWaypointParent;
+    public GameObject testRouteParent;
     [Header("Other")]
     public Transform arrow; // Reference to the arrow GameObject
     public GameObject ReachDestinationPanel;
@@ -35,6 +36,17 @@ public class WaypointManager : MonoBehaviour
 
         // Populate waypoints and enable the arrow
         PopulateWaypoints(swanseaAreanWaypointParent);
+        arrow.gameObject.SetActive(true);
+    }
+    public void StartTestRoute()
+    {
+        // Enable the waypoints and their parent
+        testRouteParent.SetActive(true);
+        ActivateAllChildren(testRouteParent);
+        //AREarthManager.CheckVpsAvailability;
+
+        // Populate waypoints and enable the arrow
+        PopulateWaypoints(testRouteParent);
         arrow.gameObject.SetActive(true);
     }
     public void StartglynnVivianArtGallery()

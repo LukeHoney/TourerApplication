@@ -525,7 +525,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 123
+  m_text: 'Opening Hours: 7am - 12am'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8d596c8a20b43bd4da45ac5f13f20044, type: 2}
   m_sharedMaterial: {fileID: 2933050140554023360, guid: 8d596c8a20b43bd4da45ac5f13f20044,
@@ -838,7 +838,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 123
+  m_text: 'Service options: Dine-in, Takeaway'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8d596c8a20b43bd4da45ac5f13f20044, type: 2}
   m_sharedMaterial: {fileID: 2933050140554023360, guid: 8d596c8a20b43bd4da45ac5f13f20044,
@@ -1621,7 +1621,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 123
+  m_text: "\xA3\xA3  - Restaurant"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8d596c8a20b43bd4da45ac5f13f20044, type: 2}
   m_sharedMaterial: {fileID: 2933050140554023360, guid: 8d596c8a20b43bd4da45ac5f13f20044,
@@ -1860,7 +1860,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 123
+  m_text: BrewStone
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8d596c8a20b43bd4da45ac5f13f20044, type: 2}
   m_sharedMaterial: {fileID: 2933050140554023360, guid: 8d596c8a20b43bd4da45ac5f13f20044,
